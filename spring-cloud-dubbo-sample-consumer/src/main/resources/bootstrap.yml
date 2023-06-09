@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: serviceA.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: serviceB.yaml
+            group: DEFAULT_GROUP
+            refresh: true
